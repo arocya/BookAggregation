@@ -2,9 +2,10 @@
 /**
  * This is a template for a Book object.
  * This is written as an example of aggregation.
- * 
- * @author Lorrie Lehmann 
- * @version 3-19-2014
+ *
+ * @auther Arion Almond
+ * @author Lorrie Lehmann
+ * @version 3-13-2016
  */
 public class Book
 {
@@ -13,7 +14,7 @@ public class Book
 	private double cost;
 	private int yearPublished;
 	private Author writer;
-	
+
 	public Book( )
 	{
 	    title = ISBN  = null;
@@ -21,7 +22,7 @@ public class Book
 	    cost = 0;
 	    yearPublished = -999;
    }
-   
+
    public Book(String inTitle, String inISBN, double inCost, int inYear, Author inWriter)
    {
        title = inTitle;
@@ -29,8 +30,8 @@ public class Book
        cost = inCost;
        yearPublished = inYear;
        writer = new Author(inWriter);
-    }  
-    
+    }
+
   public Book(Book inBook)
   {
       title = inBook.title;
@@ -39,7 +40,7 @@ public class Book
       yearPublished = inBook.yearPublished;
       writer = new Author(inBook.writer);
   }
-  
+
   public String toString( )
   {
       return "Title:\t" + title +
@@ -47,6 +48,5 @@ public class Book
              "\nAuthor:\t" + writer +
              "\nCost:\t" + cost +
              "\nYear published:\t" + yearPublished;
-   }           
-}            
-    
+   }
+}
